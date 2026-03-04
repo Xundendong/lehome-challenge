@@ -182,3 +182,9 @@ This project stands on the shoulders of giants. We utilize and build upon the fo
 - **[Isaac Lab](https://isaac-sim.github.io/IsaacLab/main/index.html)** - For modular robot learning environments
 - **[LeRobot](https://github.com/huggingface/lerobot)** - For state-of-the-art Imitation Learning algorithms
 - **[Marble](https://marble.worldlabs.ai/)** - For diverse simulation scene generation
+
+清除原来训练的权重
+```bash
+rm -rf outputs/train/act_top_long
+```
+
