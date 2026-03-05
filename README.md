@@ -187,4 +187,8 @@ This project stands on the shoulders of giants. We utilize and build upon the fo
 ```bash
 rm -rf outputs/train/act_top_long
 ```
+进入容器
+```bash
+sudo docker exec -it lehome_env /bin/bash
+```
 
