@@ -196,7 +196,7 @@ sudo docker exec -it lehome_env /bin/bash
 nohup lerobot-train \
     --config_path=configs/train_act.yaml \
     --batch_size=16 \
-    --steps=30000 \
+    --steps=300000 \
     --wandb.enable=true \
     > train_act.log 2>&1 &
 ```
