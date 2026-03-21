@@ -200,3 +200,21 @@ nohup lerobot-train \
     --wandb.enable=true \
     > train_act.log 2>&1 &
 ```
+### 📊 Evaluation Results (ACT Policy @ 300k Steps)
+
+**Experiment Setup:**
+- **Framework:** LeRobot + Isaac Lab
+- **Policy:** Action Chunking with Transformers (ACT)
+- **Training Steps:** 300,000
+- **Action Space:** 12-DoF (Bimanual Joint Angles)
+- **Task:** Garment Folding (`top_long` category)
+
+| Garment ID | Total Episodes | Successes | Success Rate | Avg Steps (Success) |
+| :--- | :---: | :---: | :---: | :---: |
+| `Top_Long_Seen_0` | 5 | 5 | **100%** | 290 |
+| `Top_Long_Seen_1` | 5 | 5 | **100%** | 293 |
+| `Top_Long_Seen_2` | 5 | 3 | **60%** | 296 |
+| `Top_Long_Seen_3` | 5 | 3 | **60%** | 303 |
+| **Overall (Partial)** | **20** | **16** | **80.0%** | **~295** |
+
+> *Note: Evaluation performed in Isaac Sim (CPU mode) to ensure deterministic physical interaction and bypass GPU tensor binding conflicts. Success is strictly defined by physical keypoint distance thresholds.*
